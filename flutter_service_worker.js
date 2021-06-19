@@ -3,9 +3,36 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "d99dd39b4d8f65168786e38fcb3c9571",
+  ".git/config": "5a603060e54e622c4dff08df2506e7f6",
+".git/description": "a0a7c3fff21f2aea3cfa1d0316dd816c",
+".git/FETCH_HEAD": "6ab0fc6ce305ad31442de23382a03d51",
+".git/HEAD": "cf7dd3ce51958c5f13fece957cc417fb",
+".git/hooks/applypatch-msg.sample": "ce562e08d8098926a3862fc6e7905199",
+".git/hooks/commit-msg.sample": "579a3c1e12a1e74a98169175fb913012",
+".git/hooks/fsmonitor-watchman.sample": "ea587b0fae70333bce92257152996e70",
+".git/hooks/post-update.sample": "2b7ea5cee3c49ff53d41e00785eb974c",
+".git/hooks/pre-applypatch.sample": "054f9ffb8bfe04a599751cc757226dda",
+".git/hooks/pre-commit.sample": "305eadbbcd6f6d2567e033ad12aabbc4",
+".git/hooks/pre-merge-commit.sample": "39cb268e2a85d436b9eb6f47614c3cbc",
+".git/hooks/pre-push.sample": "2c642152299a94e05ea26eae11993b13",
+".git/hooks/pre-rebase.sample": "56e45f2bcbc8226d2b4200f7c46371bf",
+".git/hooks/pre-receive.sample": "2ad18ec82c20af7b5926ed9cea6aeedd",
+".git/hooks/prepare-commit-msg.sample": "2b5c047bdb474555e1787db32b2d2fc5",
+".git/hooks/update.sample": "647ae13c682f7827c22f5fc08a03674e",
+".git/index": "24a7e9706e0076dd4fc8332c25bbf022",
+".git/info/exclude": "036208b4a1ab4a235d75c181e685e5a3",
+".git/logs/HEAD": "19e0afd904a8b38293a8d7d2f1ce17fc",
+".git/logs/refs/heads/main": "19e0afd904a8b38293a8d7d2f1ce17fc",
+".git/logs/refs/remotes/origin/HEAD": "19e0afd904a8b38293a8d7d2f1ce17fc",
+".git/objects/pack/pack-ee9939fee2f4e430ebc3881a0896c93288580d92.idx": "b52163b14fb88fc8a0bf595a951dfeae",
+".git/objects/pack/pack-ee9939fee2f4e430ebc3881a0896c93288580d92.pack": "1cb6248f50cacd3b4bfca1010c0cd254",
+".git/ORIG_HEAD": "faa76119f0883a43904e39fa0413b7af",
+".git/packed-refs": "6633ba2768f21f8ab44a6069c55e59fb",
+".git/refs/heads/main": "faa76119f0883a43904e39fa0413b7af",
+".git/refs/remotes/origin/HEAD": "98b16e0b650190870f1b40bc8f4aec4e",
+"assets/AssetManifest.json": "d99dd39b4d8f65168786e38fcb3c9571",
 "assets/assets/images/avatar.png": "379c3d032d1595004a1786f5d42d0b75",
-"assets/assets/images/logo.png": "5dc3dd05fe3c3dabf24678c8c611a50c",
+"assets/assets/images/logo.png": "c0f79474e00adff0e224b379d33f57b2",
 "assets/assets/svgs/computador.png": "04c2b3a07d4b14b529445ee980d49453",
 "assets/assets/svgs/computador.svg": "58b1f3bad10ac90a4a5a4317b87fec0b",
 "assets/assets/svgs/equipe-de-trabalho.png": "75058f5d1f709e4e9c6a2825713061ce",
@@ -15,17 +42,17 @@ const RESOURCES = {
 "assets/assets/svgs/perigo.png": "82d0017f96c43a7ac016df4f9218dc76",
 "assets/assets/svgs/perigo.svg": "6b87cfa467adf136c938e2abdba3312e",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
-"assets/NOTICES": "2cb3e630f2d2b92c666e29bbd6c7b2be",
+"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
+"assets/NOTICES": "307b9ddc7848e9662a4e9738c50392f2",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "f5b58200ed4aa4724411e3daf6fa2d2d",
-"/": "f5b58200ed4aa4724411e3daf6fa2d2d",
-"main.dart.js": "556c5d8fd17d2778c3d5ac4e631d5b0d",
-"manifest.json": "5541dd6d5b92347fded0d84eab8016e5",
-"version.json": "d4b64291863a516da6dd7842878ad527"
+"index.html": "0fae33cc9eda6b42bcba09c579245bc2",
+"/": "0fae33cc9eda6b42bcba09c579245bc2",
+"main.dart.js": "2d909b617c91e6cf7155eddbd150ed31",
+"manifest.json": "63e804fcdb5e75839b1bb466b8c8160b",
+"version.json": "a4e63d1132dfece7384883a36ffc8fa4"
 };
 
 // The application shell files that are downloaded before a service worker can
@@ -43,7 +70,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
 });

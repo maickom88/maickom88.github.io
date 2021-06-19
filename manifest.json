@@ -1,6 +1,6 @@
 {
-    "name": "encom_energia",
-    "short_name": "encom_energia",
+    "name": "dash",
+    "short_name": "dash",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
